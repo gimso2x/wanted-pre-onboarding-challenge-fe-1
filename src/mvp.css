@@ -522,3 +522,7 @@ blockquote footer {
     background-color: inherit;
     opacity: 0.5;
 }
+
+button.min{
+    padding: 0.3rem;
+}
