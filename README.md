@@ -1,4 +1,12 @@
-# Getting Started with Create React App
+# 클라이언트 구현 과제 개발 요건
+## Assignment 1 - Login / SignUp
+
+- /auth 경로에 로그인 / 회원가입 기능을 개발합니다
+  - /auth 경로에 로그인/회원가입페이지 개발완료 - 로그인, 회원가입 탭에따른 API경로만 변경
+- 이메일과 비밀번호의 유효성을 확인합니다
+  - 개발완료
+- 로그인 API를 호출하고, 올바른 응답을 받았을 때 루트 경로로 이동시켜주세요
+  - 개발완료
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
