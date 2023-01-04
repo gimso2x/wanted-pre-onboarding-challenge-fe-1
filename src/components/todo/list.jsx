@@ -1,15 +1,7 @@
-import { useEffect } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { fetchData } from "../../util/fetch";
-import AddTodo from "./addTodo";
 
-export default function TodoList({
-  setInvalidated,
-  todos,
-  updateTodo,
-  deleteTodo,
-}) {
+export default function TodoList({ todos, updateTodo, deleteTodo }) {
   const navigate = useNavigate();
   const [updateModeId, setUpdateModeId] = useState("");
   const [title, setTitle] = useState("");

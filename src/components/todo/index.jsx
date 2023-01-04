@@ -22,9 +22,15 @@ export default function Todo() {
     });
   }, [invalidated]);
 
-  const updateTodo = (id, data) => {
-    fetchData("PUT", `/todos/${id}`, data, localStorage.getItem("token"));
+  const updateTodo = async (id, data) => {
+    const response = await fetchData(
+      "PUT",
+      `/todos/${id}`,
+      data,
+      localStorage.getItem("token")
+    );
     setInvalidated((count) => count + 1);
+    return response;
   };
 
   const deleteTodo = (id) => {
@@ -53,12 +59,17 @@ export default function Todo() {
       </section>
       <section>
         <TodoList
-          setInvalidated={setInvalidated}
           todos={todos}
           updateTodo={updateTodo}
           deleteTodo={deleteTodo}
         />
-        {id ? <TodoDetail /> : null}
+        {id ? (
+          <TodoDetail
+            setInvalidated={setInvalidated}
+            updateTodo={updateTodo}
+            deleteTodo={deleteTodo}
+          />
+        ) : null}
       </section>
     </>
   );
